@@ -1,9 +1,18 @@
 # (DNL) Do it in Natural Language
 
+Compiles DNL document definitions into HTML. DNT allows you define all your
+HTML documents using natural language, like english. The people who create the
+document don't need any type of knowledge about HTML.
+
+The DNL have a pre-processor named DNLPP (or DNL Pre-Processor) who will
+convert the DNL notation to HTML 5 files.
+
     1 Syntax
       1.1 Create a document
       1.2 Define a custom charset
       1.3 Meta data
+      1.4 Link a stylesheet
+      1.5 Link a script file
 
 ## 1 Syntax
 
@@ -50,6 +59,23 @@ with charset "<charset>".
 To add meta data you can use the `meta data` notation:
 
 ```
-create a document named "Home Page"
+create a document named "<page name>"
 with meta data named "<meta data description>" with a value "<meta data value>".
+```
+
+### 1.4 Link a stylesheet
+HTML without some style, like CSS, is like you are accessing a page at the time
+of the creation of the WWW. So, to link a file to a document you need to
+put the follow line inside the document declaration.
+
+```
+create a document named "<page name>"
+use stylesheet file "<relative path for .css file>".
+```
+
+### 1.5 Link a script file
+
+```
+create a document named "<page name">
+use script file "<relative path for .js file>".
 ```
