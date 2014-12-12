@@ -108,5 +108,44 @@ your viewport.
 
 ```
 create a document named "<page name>"
-create a fluid conteiner.
+create a fluid container.
+```
+
+### Typography
+
+#### Headings
+The HTML supports six levels of headings. To create a heading you should use
+the follow syntax.
+
+```
+create a heading "<text>".
+```
+
+By default DNLPP will generate a heading of level 1, but you can change that
+with the follow code.
+
+```
+create a heading "<text>" of level 3.
+```
+
+Heading can contain a secondary text.
+
+```
+create a heading "<text>"
+  with a secondary heading "<text>".
+```
+
+### Text
+
+#### Paragraph
+
+```
+create a paragraph "<text>".
+```
+
+### Lead paragraph
+Make a paragraph stand out.
+
+```
+create a lead paragraph "<text>".
 ```
