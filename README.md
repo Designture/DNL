@@ -1,24 +1,26 @@
 # (DNL) Do it in Natural Language
 
-    1. Syntax
+    1 Syntax
       1.1 Create a document
-      1.2. Meta data
+      1.2 Define a custom charset
+      1.3 Meta data
 
-## 1. Syntax
+## 1 Syntax
 
-### 1.1. Create a document
-When you want create a document you can use the follow syntax. The DNLPP
-(DNL Pre-Processor) with convert it for HTML.
+### 1.1 Create a document
+To create a document you can use the follow syntax and the DNLPP
+(DNL Pre-Processor) will convert it for HTML.
 
 ```
 create a document named "<page name>"
 ```
 
-The `<page name>` should be replaced by your page name. Below we are an example
-to create a HTML page named "Home Page" and the output of that example:
+The `<page name>` should be replaced by your page title.
+Below we have an example to create a HTML page named "Home Page" and the output
+of that example:
 
 ```
-create a document named "Home Page"
+create a document named "Home Page".
 ```
 
 The expected output should be something like that:
@@ -35,10 +37,19 @@ The expected output should be something like that:
 </html>
 ```
 
-### 1.2. Meta data
+### 1.2 Define a custom charset
+The default charset is `UTF-8`, but in some cases you want use a diferente one
+and you can do that using the `charset` notation:
+
+```
+create a document named "<page name>"
+with charset "<charset>".
+```
+
+### 1.3 Meta data
 To add meta data you can use the `meta data` notation:
 
 ```
 create a document named "Home Page"
-with meta data named "description" with a value "A simple WebSite in DNL".
+with meta data named "<meta data description>" with a value "<meta data value>".
 ```
