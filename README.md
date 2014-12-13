@@ -277,3 +277,57 @@ Should produce:
 <div mainView="" role="exampleRole">
 </div>
 ```
+
+### Forms
+It's time to talk about forms, this is an important part of all web applications.
+
+#### Form syntax
+To create form use:
+
+```
+create a form
+  <declare form fields>.
+```
+
+#### Declare a field
+
+```
+with a <field type> named "<field name>".
+```
+
+#### Basic Example
+In the following example we will declare a very simple login form.
+
+```
+create a form
+  with an email field named "Email address" and
+    add an identifier "userEmail" and
+    add an attribute placeholder with value "Enter email"
+  with a password field named "Password" and
+    add an identifier "userPassword" and
+    add an attribute placeholder with value "Password"
+  with a checkbox field named "Remember Me" and
+    add an identifier "userRemember"
+  with a submit button named "Submit".
+```
+
+The above code will produce the following HTML:
+
+```HTML
+<form role="form">
+  <div class="form-group">
+    <label for="userEmail">Email</label>
+    <input type="email" class="form-control" id="userEmail" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="userPassword">Password</label>
+    <input type="password" class="form-control" id="userPassword" placeholder="Password">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Remember Me
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+```
