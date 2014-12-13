@@ -149,3 +149,131 @@ Make a paragraph stand out.
 ```
 create a lead paragraph "<text>".
 ```
+
+### Inline text elements
+Since it is sometimes necessary to manipulate certain words in a text, the DNL
+implements a syntax for this type of manipulation. Multiple modifier can be
+separated with `and` word.
+
+```
+create a paragraph
+  "This is a /<manipulate options>/example// text!".
+```
+
+#### Marked text
+For highlighting a piece of text due to its relevance in another context use
+the `marker` modifier.
+
+```
+create a paragraph
+  "This is a /marker/example// text!".
+```
+
+#### Strikethrough text
+For indicating blocks of text that are no longer relevant use `strike` modifier.
+
+```
+create a paragraph
+  "This is a /strike/example// text!".
+```
+
+#### Underlined text
+To underline text use the `underline` modifier.
+
+```
+create a paragraph
+  "This is a /underline/example// text!".
+```
+
+
+#### Small text
+For de-emphasizing inline or blocks of text, use the `small` modifier.
+
+```
+create a paragraph
+  "This is a /small/example// text!".
+```
+
+#### Bold
+For emphasizing a snippet of text with a heavier font-weight.
+
+```
+create a paragraph
+  "This is a /bold/example// text!".
+```
+
+#### Italics
+For emphasizing a snippet of text with italics.
+
+```
+create a paragraph
+  "This is a /italic/example// text!".
+```
+
+### Other things
+
+#### Alignment modifiers
+Easily realign text to components with `alignment` syntax.
+
+```
+create a paragraph
+  with <left|center|right> alignment.
+```
+
+#### Transformation syntax
+Transform text in components with text capitalization syntaxes.
+
+```
+create a paragraph
+  "This is a example text!"
+  transform text to <lowercase|uppercase|capitalize>.
+```
+
+#### Add css classes
+To add one or more classes to any element use can use the `class` or `classes`
+syntax.
+
+```
+create a div named "<identifier>"
+  add class "<class or classes>".
+```
+
+#### Add an identifier
+You may need give an unique identifier to an element to do that DNL have the
+`identifier` syntax.
+
+For example, you can create a div without the `named` syntax.
+```
+create a div
+  add identifier "<identifier>".
+```
+
+#### Add other attributes
+Is natural you need other attributer, for that we have the `attribute` syntax.
+
+```
+create a div
+  add attribute "<attribute>" with value "<value>".
+```
+
+To reduce the text in case you have many attributes you can use `attributes`
+syntax.
+
+```
+create a div
+  add attributes <attribute and attribute => value>.
+```
+
+For example, this declaration:
+
+```
+create a div
+  add attribute "mainView and role => 'exampleRole'".
+```
+
+Should produce:
+
+```HTML
+<div mainView="" role="exampleRole">
+</div>
+```
