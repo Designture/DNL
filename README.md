@@ -55,12 +55,12 @@ create a document named "<page name>"
 with charset "<charset>".
 ```
 
-### Meta data
-To add meta data you can use the `meta data` notation:
+### Metadata
+To add metadata you can use the `metadata` notation:
 
 ```
 create a document named "<page name>"
-with meta data named "<meta data description>" with a value "<meta data value>".
+with metadata named "<description>" with the value "<value>".
 ```
 
 ### Link a stylesheet
