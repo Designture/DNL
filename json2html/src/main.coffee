@@ -14,7 +14,14 @@ class Compiler
     return result
 
   compileElement: (element) ->
-    result = "<" + element.type
+    result = ""
+
+    # If the type of the element is HTML
+    # should be added doctype tag
+    if element.type == "html"
+      result += "<!DOCTYPE html>"
+
+    result += "<" + element.type
 
     # Build the attributes
     result += this.buildAttributes element.attributes
