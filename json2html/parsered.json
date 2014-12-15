@@ -1,0 +1,54 @@
+{
+  "type": "html",
+  "children": [
+    {
+      "type": "head",
+      "children": [
+        {
+          "type": "meta",
+          "attributes": [
+            {
+              "charset": "UTF-8"
+            }
+          ]
+        },
+        {
+          "type": "meta",
+          "attributes": [
+            {
+              "name": "description",
+              "content": "A simple website in DNL"
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "content": "Example"
+        },
+        {
+          "type": "body",
+          "children": [
+            {
+              "type": "div",
+              "attributes": [
+                {
+                  "class": "container"
+                }
+              ],
+              "children": [
+                {
+                  "type": "h1",
+                  "content": "Example"
+                },
+                {
+                  "type": "p",
+                  "content": "This is an example text."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
