@@ -10,48 +10,50 @@ create a container and
 
 ```JSON
 {
-  type: 'html',
-  children: [
+  "type": "html",
+  "children": [
     {
-      type: 'head',
-      children: [
+      "type": "head",
+      "children": [
         {
-          type: 'meta',
-          attributes: [
+          "type": "meta",
+          "attributes": [
             {
-              charset: 'UTF-8'
+              "charset": "UTF-8"
             }
           ]
         },
         {
-          type: 'meta',
-          attributes: [
+          "type": "meta",
+          "attributes": [
             {
-              name: 'description',
-              content: 'A simple website in DNL'
+              "name": "description",
+              "content": "A simple website in DNL"
             }
           ]
         },
         {
-          type: 'title',
-          content: 'Example'
+          "type": "title",
+          "content": "Example"
         },
         {
-          type: 'body',
-          children: [
+          "type": "body",
+          "children": [
             {
-              type: 'div',
-              attributes: {
-                class: 'container'
-              },
-              children: [
+              "type": "div",
+              "attributes": [
                 {
-                  type: 'h1',
-                  container: 'Example'
+                  "class": "container"
+                }
+              ],
+              "children": [
+                {
+                  "type": "h1",
+                  "content": "Example"
                 },
                 {
-                  type: 'p',
-                  container: 'This is an example text.'
+                  "type": "p",
+                  "content": "This is an example text."
                 }
               ]
             }

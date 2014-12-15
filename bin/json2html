@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+// vim: set filetype=javascript:
+
+var path = require('path');
+var fs = require('fs');
+var compile = require('../lib/json2html');
+
+if (process.argv.length != 3) {
+  console.log("Usage:\n$ json2html somefile.json");
+  process.exit(0);
+}
+
+var file = path.resolve(process.cwd(), process.argv[2]);
+if (!fs.existsSync(file)) {
+  console.log("File " + file + " not found");
+  process.exit(1);
+}
+
+var result = compile.compile(fs.readFileSync(file, 'utf-8'));
+console.log(result);
